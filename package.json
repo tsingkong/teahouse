@@ -10,7 +10,9 @@
     "node": ">=18"
   },
   "dependencies": {
-    "better-sqlite3": "9.6.0"
+    "better-sqlite3": "9.6.0",
+    "graceful-fs": "^4.2.11",
+    "watchman": "^1.0.0"
   },
   "scripts": {
     "postinstall": "node node_modules/@electron/rebuild/lib/cli.js -o better-sqlite3",
@@ -38,6 +40,7 @@
     "dist:win:ia32": "npm run build && cross-env NO_UPDATE_NOTIFIER=1 electron-builder --win --ia32 --publish never",
     "dist:linux": "npm run build && cross-env NO_UPDATE_NOTIFIER=1 USE_HARD_LINKS=false electron-builder --linux deb:x64 AppImage:x64 --publish never",
     "dist:linux:arm64": "npm run build && cross-env NO_UPDATE_NOTIFIER=1 USE_HARD_LINKS=false electron-builder --linux deb:arm64 AppImage:arm64 --publish never",
+    "dist:linux:loong64": "npm run build && electron-builder --linux deb:loong64",
     "dist:mac": "npm run build && cross-env NO_UPDATE_NOTIFIER=1 electron-builder --mac --publish never"
   },
   "build": {
@@ -176,5 +179,12 @@
     "vitest": "2.1.8",
     "vue": "3.5.13",
     "vue-tsc": "2.1.10"
+  },
+  "allowScripts": {
+    "better-sqlite3@9.6.0": true,
+    "electron@22.3.27": true,
+    "esbuild@0.21.5": true,
+    "protobufjs@7.6.5": true,
+    "vue-demi@0.14.10": true
   }
 }
