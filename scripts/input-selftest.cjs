@@ -171,7 +171,7 @@ async function runElectron(directory) {
     assert.ok(['', expected].includes(clipboard.readHTML()), '剪贴板不残留透明文字或本地 SVG')
   }
   try {
-    assert.equal(process.versions.electron, '22.3.27', '保持目标运行时基线')
+    assert.equal(process.versions.electron, '32.2.5', '保持目标运行时基线')
     await window.loadFile(path.join(directory, 'dist/index.html'))
     const samples = await evaluate('inputTest.samples')
     for (const [index, expected] of samples.entries()) {

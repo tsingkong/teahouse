@@ -10,7 +10,7 @@
     "node": ">=18"
   },
   "dependencies": {
-    "better-sqlite3": "9.6.0",
+    "better-sqlite3": "11.4.0",
     "graceful-fs": "^4.2.11",
     "watchman": "^1.0.0"
   },
@@ -46,7 +46,7 @@
   "build": {
     "appId": "com.pantry.app",
     "productName": "Teahouse",
-    "electronVersion": "22.3.27",
+    "electronVersion": "32.2.5",
     "npmRebuild": false,
     "asar": true,
     "asarUnpack": [
@@ -161,12 +161,12 @@
     ]
   },
   "devDependencies": {
-    "@electron/rebuild": "3.6.0",
+    "@electron/rebuild": "3.7.2",
     "@types/better-sqlite3": "7.6.11",
-    "@types/node": "16.18.119",
+    "@types/node": "20.19.43",
     "@vitejs/plugin-vue": "5.2.1",
     "cross-env": "7.0.3",
-    "electron": "22.3.27",
+    "electron": "32.2.5",
     "electron-builder": "24.13.3",
     "electron-vite": "2.3.0",
     "naive-ui": "2.43.2",
@@ -181,10 +181,10 @@
     "vue-tsc": "2.1.10"
   },
   "allowScripts": {
-    "better-sqlite3@9.6.0": true,
-    "electron@22.3.27": true,
-    "esbuild@0.21.5": true,
-    "protobufjs@7.6.5": true,
-    "vue-demi@0.14.10": true
+    "better-sqlite3": true,
+    "electron": true,
+    "esbuild": true,
+    "protobufjs": true,
+    "vue-demi": true
   }
 }

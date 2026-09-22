@@ -1,7 +1,7 @@
 #!/bin/bash
 # loong64 Electron 原生模块修复:headers 元数据与二进制不符(二进制无指针压缩)
 set -e
-ELECTRON_VERSION=22.3.27
+ELECTRON_VERSION=32.2.5
 CG="$HOME/.cache/node-gyp/$ELECTRON_VERSION/include/node/config.gypi"
 [ -f "$CG" ] || { echo "先构建一次以生成 node-gyp 缓存"; exit 1; }
 [ -f "$CG.orig" ] || cp "$CG" "$CG.orig"
